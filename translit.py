@@ -1,7 +1,6 @@
 
 class Translit:
-    
-    """класс для транслитерации"""
+    """transliteration class"""
     def __init__(self):
         # ISO 9:1995, ГОСТ 7.79-2000 Система Б
         symbols = {"a":"а", "b":"б", "v":"в", "g":"г", "d":"д", "e":"е",
@@ -14,7 +13,7 @@ class Translit:
         self.symbols = symbols
 
     def convertlatin(self, text):
-        """транслитерация в латиницу"""
+        """to latin"""
         resultlist = []
         for i in text:
             if type(i) == str:
@@ -55,7 +54,7 @@ class Translit:
         return resultlist
 
     def convertcyrillic(self, text):
-        """транслитерация в кириллицу"""
+        """to cyrillic"""
         resultlist = []
         ngrams = 3
         ngtext = self.fngrams(text, ngrams)
